@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Stories";
+}
+
+<h2>Stories</h2>
+
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <script language="JavaScript">
+        function displayUserData() {
+
+            document.getElementById('display').innerHTML =
+                document.getElementById("userInput").value;  
+            
+        }
+
+    </script>
+
+</head>
+    <body>
+
+
+        <form action="/Home/Stories" method="post" id="userInput">
+
+            <input type="text" name="StringTitleData " /> <br />
+
+            <input type="text" name="Date" /><br />
+  
+            <input type="text" name="StringTextStoryData" /><br />
+
+            <input type="submit" value="Submit form" onclick="displayUserData()" />
+
+        </form>
+
+    <p> <textarea id="display"></textarea> </p>
+
+
+
+    </body>
+</html>
